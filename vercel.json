@@ -1,6 +1,15 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/(.*)", "dest": "/index.js" }
+    {
+      "src": "/ticketing-agent",
+      "dest": "ticketing_agent.py"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/ticketing-agent"
+    }
   ]
 }

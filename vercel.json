@@ -1,11 +1,5 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/ticketing-agent",
-      "dest": "ticketing_agent.py"
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",

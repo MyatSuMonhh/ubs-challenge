@@ -1,15 +1,6 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "ticketing_agent.py",
-      "use": "@vercel/python"
-    }
-  ],
   "routes": [
-    {
-      "src": "/ticketing-agent",
-      "dest": "ticketing_agent.py"
-    }
+    { "src": "/(.*)", "dest": "/index.js" }
   ]
 }

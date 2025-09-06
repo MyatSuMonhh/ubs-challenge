@@ -43,20 +43,13 @@ def ticketing_agent():
             
             # Calculate points
             points = 0
-            
-            # Factor 1: VIP Status
             if vip_status:
                 points += 100
-            
-            # Factor 2: Credit Card Priority
             if credit_card in priority and priority[credit_card] == concert_name:
                 points += 50
-            
-            # Factor 3: Latency (Distance)
             distance = calculate_distance(customer_loc, concert_loc)
             points += get_latency_points(distance)
             
-            # Update best concert if points are higher
             if points > max_points:
                 max_points = points
                 best_concert = concert_name
